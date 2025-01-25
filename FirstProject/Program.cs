@@ -4,6 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        var first = Convert.ToDouble(args[0]);
+		var second = Convert.ToDouble(args[1]);
+		
+		Console.WriteLine(Math.Sqrt( first + second));
     }
 }
