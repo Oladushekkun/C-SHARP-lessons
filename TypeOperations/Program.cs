@@ -9,7 +9,8 @@ class Program
 		
 		//double result = GetBodyMassIndex(75.5, 1.745);
 		//Console.WriteLine(result);
-		DetermineBodeQualityByBmi(75.5, 1.930);
+		//DetermineBodeQualityByBmi(75.5, 1.930);
+		LeapYearOrNot(1900);
     }
 	static void CheckEvenNumber(int number)
 	{
@@ -46,6 +47,16 @@ class Program
 		{
 			Console.WriteLine("Ожирение");
 		}
+	}
+	static void LeapYearOrNot(double year)
+	{
+		if (year % 4 == 0, year % 100 != 0 || year % 400 == 0)
+		{
+			Console.WriteLine("Год високосный");
+			return;
+		}
+		Console.WriteLine("Год не високосный")
+		
 	}
 }
 
