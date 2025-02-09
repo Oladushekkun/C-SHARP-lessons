@@ -50,12 +50,12 @@ class Program
 	}
 	static void LeapYearOrNot(double year)
 	{
-		if (year % 4 == 0, year % 100 != 0 || year % 400 == 0)
+		if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
 		{
 			Console.WriteLine("Год високосный");
 			return;
 		}
-		Console.WriteLine("Год не високосный")
+		Console.WriteLine("Год не високосный");
 		
 	}
 }
