@@ -10,7 +10,12 @@ class Program
 		//double result = GetBodyMassIndex(75.5, 1.745);
 		//Console.WriteLine(result);
 		//DetermineBodeQualityByBmi(75.5, 1.930);
-		LeapYearOrNot(1900);
+		//LeapYearOrNot(1900);
+		
+			//double tempC;
+			//Console.WriteLine("Введите температуру");
+			//tempC = Convert.ToDouble(Console.ReadLine());
+			Temperautre(-1);
     }
 	static void CheckEvenNumber(int number)
 	{
@@ -57,6 +62,22 @@ class Program
 		}
 		Console.WriteLine("Год не високосный");
 		
+	}
+	static void Temperautre(double tempC)
+	{
+		double tempF = tempC * (9 / 5) + 32;
+		if(tempF > 100)
+		{
+			Console.WriteLine("Горячо!");
+			return;
+		}
+		
+		else if(tempF < 32)
+		{
+			Console.WriteLine("Холодно!");
+			return;
+		}
+		Console.WriteLine("Нейтрально");
 	}
 }
 
