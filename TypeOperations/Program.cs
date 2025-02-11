@@ -74,19 +74,13 @@ class Program
 	
 	static void Temperautre(double tempC)
 	{
-		double tempF = tempC * (9 / 5) + 32;
-		if(tempF > 100)
-		{
-			Console.WriteLine("Горячо!");
-			return;
-		}
-		else if(tempF < 32)
-		{
-			Console.WriteLine("Холодно!");
-			return;
-		}
+		double tempF = tempC * (9.0 / 5.0) + 32;
 		
-		Console.WriteLine("Нейтрально");
+		Console.WriteLine(tempF > 100
+			? "Горячо!"
+			: tempF < 32
+				? "Холодно!"
+				:"Нейтрально" );
 	}
 	
 	static void PercentCalculator(double depositAmount, double interestRate,double depositPeriod)
