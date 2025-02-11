@@ -27,6 +27,12 @@ class Program
 	}
 	static void CheckEvenNumber(int number)
 	{
+		string result = number % 2 == 0
+			? "Число четное"
+			: "Число нечетное";
+		
+		Console.WriteLine(result);
+		
 		if (number % 2 == 0)
 		{
 			Console.WriteLine("Число четное");
