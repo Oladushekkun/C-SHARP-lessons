@@ -27,19 +27,9 @@ class Program
 	}
 	static void CheckEvenNumber(int number)
 	{
-		string result = number % 2 == 0
+		Console.WriteLine(number % 2 == 0
 			? "Число четное"
-			: "Число нечетное";
-		
-		Console.WriteLine(result);
-		
-		if (number % 2 == 0)
-		{
-			Console.WriteLine("Число четное");
-			return;
-		}
-		
-		Console.WriteLine("Число нечетное");
+			: "Число нечетное");
 	}
 	static double GetBodyMassIndex(double mass, double height)
 	{
@@ -74,8 +64,8 @@ class Program
 			Console.WriteLine("Год високосный");
 			return;
 		}
-		Console.WriteLine("Год не високосный");
 		
+		Console.WriteLine("Год не високосный");
 	}
 	static void Temperautre(double tempC)
 	{
@@ -85,12 +75,12 @@ class Program
 			Console.WriteLine("Горячо!");
 			return;
 		}
-		
 		else if(tempF < 32)
 		{
 			Console.WriteLine("Холодно!");
 			return;
 		}
+		
 		Console.WriteLine("Нейтрально");
 	}
 	
@@ -104,6 +94,7 @@ class Program
 			Console.WriteLine("Хороший рост!");
 			return;
 		}
+		
 		Console.WriteLine("Рост умеренный");
 	}
 }
