@@ -4,19 +4,26 @@ class Program
 {
     static void Main(string[] args)
     {
+		//Задача 1 - проверка числа на четность
         //Console.WriteLine("Введите число, чтобы проверить его на четность");
 		//CheckEvenNumber(10);
 		
+		//Задача 2 - расчет индекса массы тела и определения качества тела по индексу
 		//double result = GetBodyMassIndex(75.5, 1.745);
 		//Console.WriteLine(result);
 		//DetermineBodeQualityByBmi(75.5, 1.930);
+		
+		//Задача 3 - Определение високосности года
 		//LeapYearOrNot(1900);
 		
-			//double tempC;
-			//Console.WriteLine("Введите температуру");
-			//tempC = Convert.ToDouble(Console.ReadLine());
-			//Temperautre(-1	);
-				PercentCalculator(1000000, 20, 5);
+		//Задача 4 - Конвертации температуры с градусов Цельсия на Фаренгейта
+		//double tempC;
+		//Console.WriteLine("Введите температуру");
+		//tempC = Convert.ToDouble(Console.ReadLine());
+		//Temperautre(-1	);
+		
+		//Задача 5 - Определение темпов роста вкладов 
+		PercentCalculator(1000000, 20, 5);
     }
 	static void CheckEvenNumber(int number)
 	{
