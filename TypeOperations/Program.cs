@@ -2,8 +2,8 @@
 
 class Program
 {
-    static void Main(string[] args)
-    {
+	static void Main(string[] args)
+	{
 		//Задача 1 - проверка числа на четность
         //Console.WriteLine("Введите число, чтобы проверить его на четность");
 		//CheckEvenNumber(10);
@@ -24,7 +24,7 @@ class Program
 		
 		//Задача 5 - Определение темпов роста вкладов 
 		PercentCalculator(1000000, 20, 5);
-    }
+	}
 	static void CheckEvenNumber(int number)
 	{
 		if (number % 2 == 0)
