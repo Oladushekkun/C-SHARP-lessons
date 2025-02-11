@@ -23,7 +23,7 @@ class Program
 		//Temperautre(-1	);
 		
 		//Задача 5 - Определение темпов роста вкладов 
-		PercentCalculator(1000000, 20, 5);
+		DefineRevenueGrowth(1000000, 20, 5);
 	}
 	
 	static void CheckEvenNumber(int number)
@@ -83,10 +83,9 @@ class Program
 				:"Нейтрально" );
 	}
 	
-	static void PercentCalculator(double depositAmount, double interestRate,double depositPeriod)
+	static void DefineRevenueGrowth(double depositAmount, double interestRate,double depositPeriod)
 	{
-		double totalAmount = depositAmount * Math.Pow((1 + interestRate / 100), depositPeriod);
-		totalAmount = Math.Round(totalAmount, 2);
+		double totalAmount = PercentCalculator(depositAmount, interestRate, depositPeriod);
 		
 		if(totalAmount > (1.5 * depositAmount))
 		{
@@ -95,6 +94,14 @@ class Program
 		}
 		
 		Console.WriteLine("Рост умеренный");
+	}
+	
+	static double PercentCalculator(double depositAmount, double interestRate,double depositPeriod)
+	{
+		double totalAmount = depositAmount * Math.Pow((1 + interestRate / 100), depositPeriod);
+		totalAmount = Math.Round(totalAmount, 2);
+		
+		return totalAmount;
 	}
 }
 
