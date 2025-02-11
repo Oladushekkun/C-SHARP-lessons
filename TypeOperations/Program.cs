@@ -25,17 +25,20 @@ class Program
 		//Задача 5 - Определение темпов роста вкладов 
 		PercentCalculator(1000000, 20, 5);
 	}
+	
 	static void CheckEvenNumber(int number)
 	{
 		Console.WriteLine(number % 2 == 0
 			? "Число четное"
 			: "Число нечетное");
 	}
+	
 	static double GetBodyMassIndex(double mass, double height)
 	{
 		double bmi = Math.Round(mass / Math.Pow(height, 2), 2);
 		return bmi;
 	}
+	
 	static void DetermineBodeQualityByBmi(double mass, double height)
 	{
 		double bmi = GetBodyMassIndex(mass, height);
@@ -57,6 +60,7 @@ class Program
 			Console.WriteLine("Ожирение");
 		}
 	}
+	
 	static void LeapYearOrNot(double year)
 	{
 		if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
@@ -67,6 +71,7 @@ class Program
 		
 		Console.WriteLine("Год не високосный");
 	}
+	
 	static void Temperautre(double tempC)
 	{
 		double tempF = tempC * (9 / 5) + 32;
