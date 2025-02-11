@@ -20,7 +20,7 @@ class Program
 		//double tempC;
 		//Console.WriteLine("Введите температуру");
 		//tempC = Convert.ToDouble(Console.ReadLine());
-		//Temperautre(-1	);
+		//DeterminateHeatLevelByTemperautre(-1	);
 		
 		//Задача 5 - Определение темпов роста вкладов 
 		DefineRevenueGrowth(1000000, 20, 5);
@@ -72,7 +72,7 @@ class Program
 		Console.WriteLine("Год не високосный");
 	}
 	
-	static void Temperautre(double tempC)
+	static void DeterminateHeatLevelByTemperautre(double tempC)
 	{
 		double tempF = tempC * (9.0 / 5.0) + 32;
 		
