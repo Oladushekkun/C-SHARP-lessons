@@ -14,7 +14,9 @@ class Program
 		//DetermineBodeQualityByBmi(75.5, 1.930);
 		
 		//Задача 3 - Определение високосности года
-		//LeapYearOrNot(1900);
+		Console.WriteLine(LeapYearOrNot(1900)
+			?"Год високосный"
+			:"Год не високосный");
 		
 		//Задача 4 - Конвертации температуры с градусов Цельсия на Фаренгейта
 		//double tempC;
@@ -61,15 +63,10 @@ class Program
 		}
 	}
 	
-	static void LeapYearOrNot(double year)
+	static bool LeapYearOrNot(int year)
 	{
-		if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
-		{
-			Console.WriteLine("Год високосный");
-			return;
-		}
+		return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
 		
-		Console.WriteLine("Год не високосный");
 	}
 	
 	static void DeterminateHeatLevelByTemperautre(double tempC)
