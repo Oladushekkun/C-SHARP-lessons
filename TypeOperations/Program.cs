@@ -15,7 +15,8 @@ class Program
 			//double tempC;
 			//Console.WriteLine("Введите температуру");
 			//tempC = Convert.ToDouble(Console.ReadLine());
-			Temperautre(-1);
+			//Temperautre(-1	);
+				PercentCalculator(1000000, 20, 5);
     }
 	static void CheckEvenNumber(int number)
 	{
@@ -78,6 +79,19 @@ class Program
 			return;
 		}
 		Console.WriteLine("Нейтрально");
+	}
+	
+	static void PercentCalculator(double depositAmount, double interestRate,double depositPeriod)
+	{
+		double totalAmount = depositAmount * Math.Pow((1 + interestRate / 100), depositPeriod);
+		totalAmount = Math.Round(totalAmount, 2);
+		
+		if(totalAmount > (1.5 * depositAmount))
+		{
+			Console.WriteLine("Хороший рост!");
+			return;
+		}
+		Console.WriteLine("Рост умеренный");
 	}
 }
 
