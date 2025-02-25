@@ -14,9 +14,9 @@ class Program
 		//DetermineBodeQualityByBmi(75.5, 1.930);
 		
 		//Задача 3 - Определение високосности года
-		Console.WriteLine(LeapYearOrNot(1900)
-			?"Год високосный"
-			:"Год не високосный");
+		//Console.WriteLine(LeapYearOrNot(1900)
+		//	?"Год високосный"
+		//	:"Год не високосный");
 		
 		//Задача 4 - Конвертации температуры с градусов Цельсия на Фаренгейта
 		//double tempC;
@@ -25,9 +25,35 @@ class Program
 		//DeterminateHeatLevelByTemperautre(-1	);
 		
 		//Задача 5 - Определение темпов роста вкладов 
-		DefineRevenueGrowth(1000000, 20, 5);
+		//DefineRevenueGrowth(1000000, 20, 5);
+		
+		//Задача 6 - Калькулятор с оператором
+		//double resCal = Calculate(10, 3, '-');
+		//Console.WriteLine(resCal);
+		// Вариант передачи результата одного метода другому
+		//Console.WriteLine(Calculate(Math.Pow(2, 5), 3, '-'));
+		try
+		{
+			Console.WriteLine(Calculate(5, 0, '/'));
+			//int a = int.Parse("sdsdsd");
+		}
+		catch(ArgumentException arex)
+		{
+			Console.WriteLine("Произошла попытка деления на ноль");
+			Console.WriteLine(arex.Message);
+		}
+		catch(FormatException )
+		{
+			Console.WriteLine("Произошла ошибка при приведении строки к числу");
+		}
+		catch(Exception ex)
+		{
+			Console.WriteLine("Произошла ошибка");
+			Console.WriteLine(ex.Message);
+			Console.WriteLine(ex.GetType());
+		}
+		Console.WriteLine("End");
 	}
-	
 	static void CheckEvenNumber(int number)
 	{
 		Console.WriteLine(number % 2 == 0
@@ -66,7 +92,6 @@ class Program
 	static bool LeapYearOrNot(int year)
 	{
 		return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
-		
 	}
 	
 	static void DeterminateHeatLevelByTemperautre(double tempC)
@@ -100,8 +125,51 @@ class Program
 		
 		return totalAmount;
 	}
+	
+	static double Calculate(double numOne, double numTwo, char operation)
+	{
+		if(numTwo == 0 && operation == '/')
+		{
+			throw new ArgumentException("Делитель равен нулю");
+		}
+		
+		if(operation == '/')
+		{
+			return numOne / numTwo;
+		}
+		else if(operation == '*')
+		{
+			return numOne * numTwo;
+		}
+		else if(operation == '+')
+		{
+			return numOne + numTwo;
+		}
+		else if(operation == '-')
+		{
+			return numOne - numTwo;
+		}
+		return double.NaN;
+	}
 }
+
+
 
 //название GetBodyMassIndex
 //ввод double mass, double height
 //вывод double
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
